@@ -37,10 +37,10 @@ $(window).on("scroll",function () {
     var bodyScroll = $(window).scrollTop(),
     navbar = $(".navbar");
     if(bodyScroll > 50){
-        $('.navbar-logo img').attr('src','images/logo-header.png');
+        $('.navbar-logo img').attr('src','images/AFG Logo icono.svg');
         navbar.addClass("nav-scroll");
     }else{
-        $('.navbar-logo img').attr('src','images/logo-header.png');
+        $('.navbar-logo img').attr('src','images/AFG Logo icono.svg');
         navbar.removeClass("nav-scroll");
     }
 });
@@ -48,10 +48,10 @@ $(window).on("load",function (){
     var bodyScroll = $(window).scrollTop(),
     navbar = $(".navbar");
     if(bodyScroll > 50){
-        $('.navbar-logo img').attr('src','images/logo-header.png');
+        $('.navbar-logo img').attr('src','images/AFG Logo icono.svg');
         navbar.addClass("nav-scroll");
     }else{
-        $('.navbar-logo img').attr('src','images/logo-header.png');
+        $('.navbar-logo img').attr('src','images/AFG Logo icono.svg');
         navbar.removeClass("nav-scroll");
     }
     $.scrollIt({
