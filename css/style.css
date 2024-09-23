@@ -3,7 +3,7 @@
 	margin:0;
 }
 body {
-	font-family: "Raleway", sans-serif;
+	font-family: 'Inter', sans-serif;	
 	font-size: 14px;
 	background-color: #ffffff;
 	overflow-x: hidden;
@@ -29,31 +29,37 @@ a:hover {
 	color:#5aa01c;
 }
 h1 { 
+	font-family: 'Inter', sans-serif;	
 	font-size: 45px;
 	font-weight: 500;
 	line-height: 54.46px;	
 } 
 h2{
+	font-family: 'Inter', sans-serif;	
 	font-size: 37.45px;
 	font-weight: 900;
 	line-height: 45.33px;
 }
 h3 { 
+	font-family: 'Inter', sans-serif;	
 	font-size: 26.79px;
 	font-weight: 500;
 	line-height: 32.42px;
 } 
 p { 
+	font-family: 'Inter', sans-serif;	
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 19.36px;
 } 
 blockquote { 
+	font-family: 'Inter', sans-serif;	
 	font-size: 23px;
 	font-weight: 400;
 	line-height: 35.82px;	
 } 
-pre { 
+pre {
+	font-family: 'Inter', sans-serif;	 
 	font-size: 11px; 
 	font-style: normal; 
 	font-variant: normal; 
@@ -500,7 +506,7 @@ pre {
     z-index: 1;
 }
 .what-we-do-banner .banner-content{
-	padding: 300px;
+	padding: 200px;
 	margin-top: 300px;
 	text-align: center;
 }
@@ -1191,7 +1197,7 @@ pre {
 	padding-bottom: 100px;
 }
 .serve-item {
-	background-color: #f1f1f1;
+	background-color: #F2F3F5;
     transition: .5s;
 }
 .serve-item-block{
@@ -1202,6 +1208,7 @@ pre {
 	text-align: center;
 }
 .serve-item p{
+	color: #A8A9AD;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 15.73px;
@@ -1323,7 +1330,7 @@ pre {
 	padding-bottom: 100px;
 }
 .partnership-item {
-	background-color: #f1f1f1;
+	background-color: #F2F3F5;
     transition: .5s;
 }
 .partnership-item-block{
@@ -1334,6 +1341,7 @@ pre {
 	text-align: left;
 }
 .partnership-item p{
+	color: #A8A9AD;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 15.73px;
@@ -1418,6 +1426,10 @@ pre {
 .beneficiary-rows{
 	padding-top: 100px;
 	padding-bottom: 100px;
+}
+.beneficiary-row-2 .content-left{
+	margin-top: 10%;
+	text-align: center;
 }
 .beneficiary-2{
 	margin-top: -100px;
@@ -1514,6 +1526,7 @@ pre {
 =============================*/
 .news-box {
     transition: .5s;
+	box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
 }
 .news-box .img-box img{
 	width: 100%;
@@ -1539,6 +1552,7 @@ pre {
 	color: #f0f0f0;
 }
 .news-box p{
+	color: #A8A9AD;
 	padding: 10px 20px 0px 20px;
 	font-size: 12px;
 	font-weight: 400;

@@ -85,8 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "payment_method_types" => ["card"],
                     "mode" => "payment",
                     "customer_email" => $email,
-                    "success_url" => "http://localhost/AfricaGolfFoundation/success.html?form=donation",
-                    "cancel_url" => "http://localhost/AfricaGolfFoundation/donate.html",
+                    "success_url" => "http://localhost/AFGver2/success.html?form=donation",
+                    "cancel_url" => "http://localhost/AFGver2/donate.html",
                     "locale" => "auto",
                     "line_items" => [
                         [
