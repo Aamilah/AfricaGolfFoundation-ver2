@@ -596,6 +596,18 @@ pre {
 		display: none;
 	  }
 }
+@media (max-width: 440px) {
+	.who-we-do-it-for-banner .banner-content{
+		margin-top: 200px;
+		margin-left:0px;
+		padding: 0px;
+		text-align: left;
+	}
+	.banner-content p {
+		display: contents;
+		font-size: 12px;
+	  }
+}
 .section-padding {
 	padding:80px 0px;
 }
@@ -1363,6 +1375,42 @@ pre {
 .who-we-serve-item .content-right{
 	height: 100%;
 }
+@media (max-width: 440px) {
+	.who-we-serve {
+		padding-top: 50px;
+	  }
+	
+	  .who-we-serve-item {
+		padding: 20px 10px;
+	  }
+	
+	  .who-we-serve-item .content-right {
+		padding: 10px;
+		margin-top: 5%;
+	  }
+	
+	  .who-we-serve-item .row {
+		flex-direction: column;
+	  }
+	
+	  .who-we-serve-item .col-lg-6 {
+		width: 100%;
+		margin-bottom: 20px;
+	  }
+	
+	  .who-we-serve-item img {
+		width: 100%;
+		height: auto;
+	  }
+	
+	  .who-we-serve-item h2 {
+		font-size: 1.5rem;
+	  }
+	
+	  .who-we-serve-item p {
+		font-size: 0.9rem;
+	  }
+}
 /*===========================
 	partnership
 =============================*/
@@ -1554,6 +1602,15 @@ pre {
 		margin-left: -46px;
 	}
 }
+@media (max-width:440px) {
+	.beneficiary-banner .banner-content p{
+		display: none;
+	}
+	.beneficiary-1 {
+		margin-top: -300px;
+	}
+}
+
 @media (max-width:380px) {
 	.beneficiary-1 {
 		margin-top: -150px;
