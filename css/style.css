@@ -493,12 +493,11 @@ pre {
     justify-content: center;
     align-items: center;
 }
-/* Specific gradient for the banner on the "What We Do" page */
 .what-we-do-banner .banner-overlay {
-    background: linear-gradient(360deg, #5AA01C 0%, rgba(26, 48, 6, 0) 100%);
+    background: linear-gradient(360deg, #4c841c 0%, rgba(26, 48, 6, 0) 100%);
 }
 .who-we-do-it-for-banner .banner-overlay{
-	background: linear-gradient(270deg, rgba(90, 160, 28, 0) 0%, #5AA01C 59.6%);
+	background: linear-gradient(270deg, rgba(90, 160, 28, 0) 0%, #4c841c 59.6%);
 }
 .banner-content {
 	padding: 70px;
@@ -540,8 +539,8 @@ pre {
 	}
   
 	.what-we-do-banner .banner-content {
-	  padding: 100px; 
-	  margin-top: 190px; 
+	  padding: 10px; 
+	  margin-top: 220px; 
 	}
   
 	.who-we-do-it-for-banner .banner-content {
@@ -1070,8 +1069,8 @@ pre {
 }
 
 .custom-list li::before {
-    content: '•'; /* Custom bullet point */
-    color: green; /* Set the bullet color */
+    content: '•'; 
+    color: green; 
     position: absolute;
     left: 0;
 	margin-right: 90px;
@@ -1083,7 +1082,7 @@ pre {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5AA01C; /* Adjust to match the green background */
+    background-color: #5AA01C; 
 }
 
 .goals-container {
@@ -1199,7 +1198,20 @@ pre {
 		display: none;
 	  }
 }
-
+@media (max-width:440px) {
+	.what-we-do-2 .content-left{
+		text-align: center;
+		width: 120%;
+		margin-left: 7px;
+	}
+	.what-we-do-2 .content-right img{
+		padding-right: 40px;
+	}
+	.what-we-do-4 .goals-container .goals-image img{
+		padding-top: 20px;
+		padding-left: 190px;
+	}
+}
 /*===========================
 	how-we-serve
 =============================*/
@@ -1315,7 +1327,25 @@ pre {
 	.donate-rows .how-we-serve-container .btn{
 		margin-left: 125px;
 	}
+	.how-we-serve-content {
+        width: 100%; 
+        left: 0; 
+        top: 100%; 
+        transform: translateY(0);
+        padding: 10px;
+    }
+	.how-you-difference .how-we-serve-container:hover .btn {
+		margin-left: -40px;
+		width: 100px;
+	}
+    .how-we-serve-content::after {
+        left: 50%;
+        top: -10px;
+        transform: rotate(180deg) translateX(-50%);
+    }
 }
+
+
 
 /*===========================
 	who-we-serve
@@ -2057,15 +2087,15 @@ pre {
 		display: none;
 	}
     .footer h4 {
-        font-size: 20px;
-        text-align: center;
+		font-size: 12px;
+		margin-left: 200px;
+		padding-left: 20px;
 		margin-top: -80px;
-
     }
 
     .footer .footer-social {
         justify-content: center;
-        gap: 15px;
+		margin-left: 230px;
     }
 
     .footer-copy {
@@ -2074,27 +2104,26 @@ pre {
     }
 
     .footer-copy p {
-        font-size: 8px;
-		margin-top: 20px;
+		margin-top: 0px;
 		margin-bottom: 0px;
     }
 
     .footer-copy .content-right {
-       display: none;
+		display: none;
     }
 
     /* Adjusting the logo image */
     .footer .logo {
-        width: 50px;
-        height: 20%;
+		width: 100%; 
+		height: auto;
         display: block;
-        margin: 10px 100px 20px 100px;
+		padding-left: 10px;
     }
 
     /* Stack columns vertically */
     .footer .row > [class*='col-'],
     .footer-copy .row > [class*='col-'] {
-        width: 50%;
+        width: 80%;
     }
 }
 
@@ -2545,14 +2574,14 @@ font-size: 16px;
 @media all and (max-width:991px) {
 .navbar .navbar-collapse {
 	overflow: auto;
-	background: #ebfff2;
+	background: #fff;
 	color: #000000 !important;
 	text-align: center;
 	padding: 10px 0;
 }
 .nav-scroll .navbar-collapse {
 	background: #fff !important;
-	color: #000000;
+	color: #fff;
 }
 #donation_form {
 	margin-bottom:20px;
