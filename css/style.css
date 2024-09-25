@@ -270,7 +270,7 @@ pre {
 }
 /* Text Positioning for Single Slider */
 .slider .single-slider .text {
-    margin-top: 220px;
+    margin-top: 320px;
 }
 
 .slider.index2 .single-slider .text {
@@ -289,19 +289,17 @@ pre {
 
 /* Heading (h1) Styles within Slider */
 .slider .single-slider h1 {
-    color: #fff;
-    font-size: 38px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    line-height: 42px;
+	color: #fff;
+	animation: fadeInUp 1s both 0.6s;
+}
+.slider .single-slider blockquote{
+	font-size: 14px;
+	color: #fff;
 }
 /* Paragraph (p) Styles within Slider */
 .slider .single-slider p {
-    color: #2C2D3F;
-    margin-top: 27px;
-    font-weight: 400;
-    font-size: 16px;
+	color: #fff;
+	animation: fadeInUp 1s both 0.7s;
 }
 /* Customize Tiny Slider navigation */
 .tns-nav button {
@@ -336,7 +334,7 @@ pre {
 
 .single-slider .btn {
     position: absolute;
-    top: 450px;
+    top: 500px;
     z-index: 10;
 }
 
