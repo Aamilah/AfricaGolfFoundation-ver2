@@ -2595,6 +2595,9 @@ font-size: 16px;
   
 
 @media all and (max-width:991px) {
+	p{
+		font-size: medium;
+	}
 .navbar .navbar-collapse {
 	overflow: auto;
 	background: #fff;
