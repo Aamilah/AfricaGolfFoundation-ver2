@@ -65,91 +65,19 @@ $(window).on("load",function (){
 // navbar animation end
 
 // Carousel Start
-    // Header carousel
-    $(".hero-slider").owlCarousel({
-        autoplay: true,
-        animateOut: 'fadeOutLeft',
-        smartSpeed: 1000,           // Smooth transition speed
-        items: 1,
-        dots: true,
-        loop: true,
-        nav : true,
-        freeDrag: false,             // Ensure smooth transitions without free dragging
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
-
-$('.article-slider').owlCarousel({
-		autoplay:true,
-		autoplayTimeout:4000,
-		margin:15,
-		smartSpeed:300,
-		autoplayHoverPause:true,
-		loop:true,
-		nav:true,
-		dots:false,
-		responsive:{
-			300: {
-				items:1,
-			},
-			480: {
-				items:2,
-			},
-			768: {
-				items:2,
-			},
-			1170: {
-				items:4,
-			},
-		}
-	});
-
-$(".custom-carousel").owlCarousel({
-    autoWidth: true,
-    loop: true
-    });
-    $(document).ready(function () {
-    $(".custom-carousel .item").click(function () {
-        $(".custom-carousel .item").not($(this)).removeClass("active");
-        $(this).toggleClass("active");
-    });
+var slider = tns({
+  container: '.my-slider',
+  items: 1,
+  slideBy: 'page',
+  autoplay: true,
+  controls: false,
+  nav: false,
+  autoplayButtonOutput: false, // Disable the autoplay button
+  speed: 400,
+  loop: true,
+  mouseDrag: true
 });
 
-// Testimonials carousel
-$(".testimonial-carousel").owlCarousel({
-    autoplay: false,
-    smartSpeed: 1000,
-    center: true,
-    dots: false,
-    loop: true,
-    nav : true,
-    navText : [
-        '<i class="bi bi-arrow-left"></i>',
-        '<i class="bi bi-arrow-right"></i>'
-    ],
-    responsive: {
-        0:{
-            items:1
-        },
-        768:{
-            items:2
-        }
-    }
-});
-$(".modal-carousel").owlCarousel({
-    autoplay: false,
-    animateOut: 'fadeOutLeft',
-    items: 1,
-    dots: true,
-    loop: true,
-    nav : true,
-    navText : [
-        '<i class="bi bi-chevron-left"></i>',
-        '<i class="bi bi-chevron-right"></i>'
-    ]
-});
 // Carousel End
 
 // International Phone Num Input section start

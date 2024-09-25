@@ -20,8 +20,8 @@ maximum-scale=1.0, user-scalable=no" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <link rel="stylesheet" href="css/animate.css">
-<!-- Owl Carousel CSS -->
-<link rel="stylesheet" href="css/owl-carousel.css">
+<!-- Tiny Slider CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <script src="https://kit.fontawesome.com/9592a3159e.js" crossorigin="anonymous"></script>
@@ -54,23 +54,20 @@ maximum-scale=1.0, user-scalable=no" />
 </nav>
 <!-- End Navbar --> 
 <!-- Slider Area -->
-<section class="slider hero-slider">
-
+<section class="slider">
+  <div class="my-slider">
     <!-- Start Single Slider -->
     <div class="single-slider" style="background-image:url('images/index-banner.png');">
-      <!-- Overlay to add a darkened effect -->
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <!-- Text Section -->
           <div class="col-lg-7">
             <div class="text">
               <blockquote class="white">Africa Golf Foundation</blockquote>
               <h1>Creating Pathways.</h1>
-              <p class="white">Welcome to the Africa Golf Foundation , dedicated to fostering inclusion, growth and development within Arica's vibrant community</p>
+              <p class="white">Welcome to the Africa Golf Foundation, dedicated to fostering inclusion, growth, and development within Africa's vibrant community.</p>
               <div class="button">
-                <a href="who-we-do-it-for.html" target="_blank"><button class="btn btn-primary" >Learn More</button>
-                </a>
+                <a href="who-we-do-it-for.html" target="_blank"><button class="btn btn-primary">Learn More</button></a>
               </div>
             </div>
           </div>
@@ -78,7 +75,24 @@ maximum-scale=1.0, user-scalable=no" />
       </div>
     </div>
     <!-- End Single Slider -->
-    <!-- Start Single Slider -->
+    <div class="single-slider" style="background-image:url('images/index-banner-2.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="text">
+              <blockquote class="white">Africa Golf Foundation</blockquote>
+              <h1>Advancing Growth.</h1>
+              <p class="white">Welcome to the Africa Golf Foundation, dedicated to fostering inclusion, growth, and development within Africa's vibrant golf community.</p>
+              <div class="button">
+                <a href="who-we-do-it-for.html" target="_blank"><button class="btn btn-primary">Learn More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat for other sliders -->
     <div class="single-slider" style="background-image:url('images/index-banner-2.jpg')">
       <div class="overlay"></div>
       <div class="container">
@@ -87,30 +101,9 @@ maximum-scale=1.0, user-scalable=no" />
             <div class="text">
               <blockquote class="white">Africa Golf Foundation</blockquote>
               <h1>Breaking Down Barriers.</h1>
-              <p class="white">
-                Welcome to the Africa Golf Foundation, dedicated to fostering inclusion, growth and development within Africa's vibrant golf community.
-              </p>
+              <p class="white">Welcome to the Africa Golf Foundation, dedicated to fostering inclusion, growth, and development within Africa's vibrant golf community.</p>
               <div class="button">
-                <a href="who-we-do-it-for.html" target="_blank"><button class="btn btn-primary" >Learn More</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Start End Slider -->
-    <!-- Start Single Slider -->
-    <div class="single-slider" style="background-image:url('images/what-we-do-banner.png')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="text">
-              <blockquote class="white">Africa Golf Foundation</blockquote>
-              <h1>Advancing Growth.</h1>
-              <p class="white">Welcome to the Africa Golf Foundation, dedicated to fostering inclusion, growth and development within Africa's vibrant golf community.</p>
-              <div class="button">
-                <a href="donate.html" target="_blank"><button class="btn btn-primary" >Learn More</button></a>
+                <a href="who-we-do-it-for.html" target="_blank"><button class="btn btn-primary">Learn More</button></a>
               </div>
             </div>
           </div>
@@ -118,7 +111,9 @@ maximum-scale=1.0, user-scalable=no" />
       </div>
     </div>
     <!-- End Single Slider -->
+  </div>
 </section>
+
 
 <!-------	index-2 End------->
 
@@ -129,6 +124,7 @@ maximum-scale=1.0, user-scalable=no" />
         <div class="content-left">
           <h2>Creating Opportunities, <span class="orange">Changing Lives,</span> Empowering Communities</h2>
           <p>“Give a man a fish and you will feed him for a day. Teach a man to fish and you will feed him for a lifetime.”</p>
+          <p>We believe that everyone should have the opportunity to experience the joys and benefits of golf, from the camaraderie that it fosters to the lessons in discipline perseverance and sportsmanship it imparts. By providing financial assistance, mentorship programs and access to resources, we aim to empower individuals to pursue their passion for golf and realise their full potential both on and off the course.</p>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12">
@@ -174,61 +170,62 @@ maximum-scale=1.0, user-scalable=no" />
   </div>
 </section>
 <!-------mission End-------> 
-
-<!-- Index-partners -->
-<section class="index-partners">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="index-partners-img">
-          <img src="images/partners-index.png"/>
+<section class="index-difference section-padding">
+  <div class="container">
+    <div class="text-center">
+      <h2>Together We Can Make A <span class="orange">Difference</span></h2>
+      <p>Join us in our mission to transform lives through the power of golf, your help make golf accessible to all, provide opportunities for personal growth and help in creating positive change in the community.</p>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="image-container">
+            <img src="images/index-donations.jpg" alt="Golf Equipment Donations" class="donation-image">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <h5>Make a <span class="brown">Donation</span></h5>
+          <p>Your cash donations are crucial in fuelling our initiatives across Africa. Every donation drives us closer to our goals. Cash donations fund educational and training scholarships, outreach programs, training camps and workshops, support for new and existing facilities and many other initiatives. Equipment is either distributed to players, clubs and educational institutions. It is also used for outreach programs. Your club could be the first club a future champion ever holds.</p>
+          <div class="button">
+            <a href="donate.html" ><button class="btn btn-primary">Learn More</button></a>
+          </div>
         </div>
       </div>
-      <div class="col-lg-8">
-        <div class="content">
-          <div class="sub-content-1">
-            <h2>Our Partners</h2>
-            <p>Our mission to make golf accessible to all would not be possible without the support of our dedicated partners who share our vision and commitment to nurturing the next generation of golfers, fostering community engagement, and expanding the reach of this incredible sport.</p>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-7">
+          <h5>Become a <span class="orange">Partner</span></h5>
+          <p>Partnerships are a powerful means to achieve our objectives. We are seeking partnership opportunities with both corporate and other parties from both within and outside the sport.</p><p> Partnerships bring more than just financial and physical resources, but also knowledge and experience that can aid our programs and their participants. Whether they are short, medium or long-term in nature, every partnership makes a big difference.</p>
+          <div class="button">
+            <a href="partnerships.html" ><button class="btn btn-primary">Learn More</button></a>
           </div>
-          <div class="sub-content-2">
-            <h2>About our Partners</h2>
-            <p>We invite you to partner with us to help us fulfill our mission of fostering inclusivity, accessibility, and empowerment through the game of golf. By collaborating with us, you will play a vital role in breaking down barriers, creating opportunities, and changing lives in underrepresented communities.
-              <br>
-              Together, we can make golf a sport for everyone, regardless of background or ability, while empowering individuals and transforming communities through education, mentorship, and support. Your partnership will help us create a more inclusive and accessible future, where golf is not just a game, but a powerful tool for social and economic change. We offer different types of partnerships such as:</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="image-container">
+            <img src="images/index-partners.jpg" alt="Golf Partners" class="donation-image">
           </div>
-          <div class="icon">
-            <div class="row">
-              <div class="col">
-                <div class="icon-item">
-                  <i class="fa-solid fa-bullhorn"></i>
-                  <p>Marketing Partnership</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="icon-item">
-                  <i class="fa-solid fa-hand-holding-dollar"></i>
-                  <p>Corporate, Donations and Grants</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="icon-item">
-                  <i class="fa-solid fa-users"></i>
-                  <p>Material and Equipment Partnerships</p>
-                </div>
-              </div>
-              <div class="col">
-                <div class="icon-item last-icon">
-                  <i class="fa-solid fa-user"></i>
-                  <p>Partnerships with individuals</p>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="image-container">
+            <img src="images/index-mentor.jpg" alt="Golf Mentor" class="donation-image">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <h5>Become a <span class="green">Mentor</span></h5>
+          <p>We are seeking dedicated volunteers to mentor aspiring participants in various roles including players, caddies, coaches, groundskeepers, administrators and more.</p><p> Your donation of your time is priceless and could contribute to the career development of the next African legend. Additionally, we are eager to forge partnerships between golf clubs to expand our reach and impact.</p>
+          <div class="button">
+            <a href="contact.html" ><button class="btn btn-primary">Learn More</button></a>
           </div>
         </div>
       </div>
     </div>
   </div>
- </section>
+</section>
 
 <!-- Index-donate -->
  <section class="index-donate green-bg">
@@ -330,8 +327,8 @@ maximum-scale=1.0, user-scalable=no" />
 <!-- scrollIt js --> 
 <script src="js/scrollIt.min.js"></script> 
 <script src="js/wow.min.js"></script> 
-		<!-- Owl Carousel JS -->
-<script src="js/owl-carousel.js"></script>
+<!-- Tiny Slider JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -229,17 +229,22 @@ pre {
 	Start Hero Area CSS
 =============================*/
 /* General Slider Styles */
-
-.slider .single-slider {
-    background-color: #ebfff2;
-    margin-top: 0px;
-    height: 650px;
+.slider{
+	margin-top: -70px;
+	padding: 0px;
+}
+.slider, .single-slider {
+    margin: 0;
+    padding: 0;
+}
+.single-slider {
+    height: 95vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    width: 100%; /* Ensure full width */
-    overflow: hidden; /* Hide any overflow */
+    width: 100%;
+    overflow: hidden; 
 }
 .overlay {
     position: absolute;
@@ -257,7 +262,6 @@ pre {
     margin-top: 0;
     left: 0;
     width: 100%;
-    height: 72%;
     background-color: rgba(1, 79, 30, 0.58);
 }
 /* Image Opacity for Single Slider */
@@ -299,123 +303,47 @@ pre {
     font-weight: 400;
     font-size: 16px;
 }
-.slider .owl-nav .owl-prev,
-.slider .owl-nav .owl-next {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    border-radius: 45px;
-    font-size: 22px;
-    transition: .5s;
-}
-
-.slider .owl-nav .owl-prev:hover,
-.slider .owl-nav .owl-next:hover {
-    background: #ebfff2;
-}
-
-.slider .owl-dots {
-    position: absolute;
-    height: 45px;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slider .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
+/* Customize Tiny Slider navigation */
+.tns-nav button {
     background: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 15px;
+    width: 15px;
+    height: 15px;
     transition: .5s;
 }
 
-.slider .owl-dot::after {
-    position: absolute;
-    content: "";
-    width: 5px;
-    height: 5px;
-    top: 4px;
-    left: 4px;
-    background: #FFFFFF;
-    border-radius: 5px;
+.tns-nav button:hover {
+    background: #fff;
 }
 
-.slider .owl-dot.active {
+.tns-nav button.tns-nav-active {
+    background: #fff;
+}
+
+.tns-controls button {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    width: 45px;
+    height: 45px;
+}
+
+.tns-controls button:hover {
     background: #ebfff2;
 }
 
-
-.slider .owl-carousel .owl-nav div {
-    height: 0px;
-    width: 0px;
-    line-height: 0px;
-    text-align: center;
-    background: #ebfff2;
-    color: #fff;
-    font-size: 0px;
-    position: absolute;
-    margin: 0;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    padding: 0;
-    border-radius: 50%;
-}
-
-/* Hover Effect for Navigation */
-.slider .owl-carousel .owl-nav div:hover {
-    background: #ebfff2;
-    color: #fff;
-}
-
-/* Owl Carousel Navigation Positioning */
-.slider .owl-carousel .owl-controls .owl-nav .owl-prev {
-    left: 20px;
-}
-
-.slider .owl-carousel .owl-controls .owl-nav .owl-next {
-    right: 20px;
-}
-
-/* Slider Animation */
-.owl-item.active .single-slider h1 {
-    animation: fadeInUp 1s both 0.6s;
-}
-
-.owl-item.active .single-slider p {
-    animation: fadeInUp 1s both 1s;
-}
-
-.owl-item.active .single-slider .button {
-    animation: fadeInDown 1s both 1.5s;
-}
-
-.owl-item.active .single-slider .box {
-    animation: bounce 1s both 1s;
-}
-
-/* Additional Styles to Ensure Button is Clickable */
 .single-slider .btn {
-    z-index: 10; /* Ensures button is above other elements */
-    position: relative;
+    position: absolute;
+    top: 450px;
+    z-index: 10;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-	.slider .single-slider, .streamer-section .streamer {
+	.slider .single-slider{
 		height: 550px;
 	}
 
@@ -435,12 +363,12 @@ pre {
 		margin-top: 50px;
 	}
 
-	.slider .single-slider, .streamer-section .streamer  h1 {
+	.slider .single-slider h1 {
 		font-size: 28px;
 		line-height: 32px;
 	}
 
-	.slider .single-slider, .streamer-section .streamer  p {
+	.slider .single-slider p {
 		font-size: 14px;
 	}
 }
@@ -450,7 +378,7 @@ pre {
 		height: 550px;
 	}
 
-    .streamer-section .streamer  h1 {
+    .streamer-section h1 {
 		font-size: 24px;
 		line-height: 28px;
 	}
@@ -636,8 +564,6 @@ pre {
 	background-color: #5AA01C;
 	color: #fff;
 	padding: 50px;
-	margin-top: -100px;
-	margin-bottom: -100px;
 }
 .content-right .index-2-item .icon{
 	display: flex;
@@ -787,6 +713,47 @@ pre {
     z-index: 3;
 	width: 70%;
 }
+/*===========================
+	Index-difference
+=============================*/
+.index-difference .content{
+	padding: 40px;
+}
+.index-difference {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.donation-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.text-overlay h1 {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
 /*===========================
 	Index-partners
 =============================*/
@@ -1315,6 +1282,7 @@ pre {
 }
 .how-you-difference .how-we-serve-container .btn{
 	margin-left: 100px;
+    transition: .5s;
 }
 .how-you-difference .how-we-serve-container:hover .btn {
 	margin-left: 20px;
@@ -1370,7 +1338,7 @@ pre {
 }
 .who-we-serve-item .content-right{
 	padding: 20px;
-	margin-top: 15%;
+	margin-top: 7%;
 }
 .who-we-serve-item .content-right{
 	height: 100%;
@@ -1415,7 +1383,7 @@ pre {
 	partnership
 =============================*/
 .partnership{
-	padding-top: 100px;
+	padding-top: 20px;
 	padding-bottom: 100px;
 }
 .partnership-item {
