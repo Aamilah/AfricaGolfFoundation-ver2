@@ -13,7 +13,7 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background: #fff url('https://lottiefiles.com/free-animation/material-wave-loading-yt2uoeE83o') no-repeat center center;
+	background: #fff url('images\loading.gif') no-repeat center center;
 	z-index: 9999;
   }
   
@@ -229,22 +229,15 @@ pre {
 	Start Hero Area CSS
 =============================*/
 /* General Slider Styles */
-.slider{
-	margin-top: -70px;
-	padding: 0px;
-}
-.slider, .single-slider {
-    margin: 0;
-    padding: 0;
-}
-.single-slider {
-    height: 95vh;
+.slider .single-slider {
+    margin-top: 0px;
+    height: 700px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    width: 100%;
-    overflow: hidden; 
+    width: 100%; /* Ensure full width */
+    overflow: hidden; /* Hide any overflow */
 }
 .overlay {
     position: absolute;
@@ -252,7 +245,7 @@ pre {
     left: 0;
     width: 100%;
     height: 100%;
-	background: linear-gradient(90deg, #1A3006 0%, rgba(26, 48, 6, 0) 100%);
+    background: linear-gradient(90deg, #1A3006 0%, rgba(26, 48, 6, 0) 100%);
 }
 .slider-margin{
 	margin-top: 130px;
@@ -262,6 +255,7 @@ pre {
     margin-top: 0;
     left: 0;
     width: 100%;
+    height: 72%;
     background-color: rgba(1, 79, 30, 0.58);
 }
 /* Image Opacity for Single Slider */
@@ -270,7 +264,7 @@ pre {
 }
 /* Text Positioning for Single Slider */
 .slider .single-slider .text {
-    margin-top: 320px;
+    margin-top: 330px;
 }
 
 .slider.index2 .single-slider .text {
@@ -278,66 +272,132 @@ pre {
 }
 
 /* Span Styles within Slider */
-.slider .single-slider span {
-    color: #CBD4E1;
+.slider .single-slider blockquote {
     font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-    padding-bottom: 10px;
-    line-height: 40px;
 }
 
 /* Heading (h1) Styles within Slider */
 .slider .single-slider h1 {
-	color: #fff;
-	animation: fadeInUp 1s both 0.6s;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
-.slider .single-slider blockquote{
-	font-size: 14px;
-	color: #fff;
-}
+
 /* Paragraph (p) Styles within Slider */
 .slider .single-slider p {
-	color: #fff;
-	animation: fadeInUp 1s both 0.7s;
+    margin-top: 27px;
 }
-/* Customize Tiny Slider navigation */
-.tns-nav button {
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    border-radius: 15px;
-    width: 15px;
-    height: 15px;
+
+
+.slider .owl-nav .owl-prev,
+.slider .owl-nav .owl-next {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: #ffffff;
+    color: #EE9F27;
+    border-radius: 45px;
+    font-size: 22px;
     transition: .5s;
 }
 
-.tns-nav button:hover {
+.slider .owl-nav .owl-prev:hover,
+.slider .owl-nav .owl-next:hover {
     background: #fff;
 }
 
-.tns-nav button.tns-nav-active {
-    background: #fff;
-}
-
-.tns-controls button {
-    background: transparent;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 45px;
-    width: 45px;
-    height: 45px;
-}
-
-.tns-controls button:hover {
-    background: #ebfff2;
-}
-
-.single-slider .btn {
+.slider .owl-dots {
     position: absolute;
-    top: 500px;
-    z-index: 10;
+    height: 45px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.slider .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.slider .owl-dot::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 4px;
+    left: 4px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.slider .owl-dot.active {
+    background: #fff;
+}
+
+
+.slider .owl-carousel .owl-nav div {
+    height: 0px;
+    width: 0px;
+    line-height: 0px;
+    text-align: center;
+    font-size: 0px;
+    position: absolute;
+    margin: 0;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    padding: 0;
+    border-radius: 50%;
+}
+
+/* Hover Effect for Navigation */
+.slider .owl-carousel .owl-nav div:hover {
+    color: #fff;
+}
+
+/* Owl Carousel Navigation Positioning */
+.slider .owl-carousel .owl-controls .owl-nav .owl-prev {
+    left: 20px;
+}
+
+.slider .owl-carousel .owl-controls .owl-nav .owl-next {
+    right: 20px;
+}
+
+/* Slider Animation */
+.owl-item.active .single-slider h1 {
+    animation: fadeInUp 1s both 0.6s;
+}
+
+.owl-item.active .single-slider p {
+    animation: fadeInUp 1s both 1s;
+}
+
+.owl-item.active .single-slider .button {
+    animation: fadeInDown 1s both 1.5s;
+}
+
+.owl-item.active .single-slider .box {
+    animation: bounce 1s both 1s;
+}
+
+/* Additional Styles to Ensure Button is Clickable */
+.single-slider .btn {
+    z-index: 10; /* Ensures button is above other elements */
+    position: relative;
+}
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -552,11 +612,11 @@ pre {
 	index-2
 =============================*/
 .index-2{
-	padding: 0px 0px 0 0px;
+	padding: 0px;
 }
 .index-2 .content-left{
-	padding: 20px;
-	margin-top: 150px;
+	padding: 30px;
+	margin-top: 120px;
 }
 .index-2 .content-right{
 	background-color: #5AA01C;
@@ -576,15 +636,11 @@ pre {
 	line-height: 40px;
 }
 .content-right .index-2-item h4{
-	font-size: 26.79px;
-	font-weight: 500;
 	line-height: 32.42px;
 	padding-bottom: 10px;
 	text-align: left;
 }
 .content-right .index-2-item p{
-	font-size: 16px;
-	font-weight: 400;
 	line-height: 19.36px;
 	text-align: left;
 }
@@ -1004,7 +1060,7 @@ pre {
 	color: #fff;
 }
 .what-we-do-2 .content-left .content-left-text{
-	padding-left: 40px;
+	padding-left: 0px;
 	padding-right: 40px;
 }
 .what-we-do-3{
