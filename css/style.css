@@ -1403,15 +1403,18 @@ pre {
 	padding: 30px;
 }
 .target-content-item h3{
-	font-size: 24px;
+	font-size: 20px;
 }
 .target-content-item blockquote{
 	font-size: 12px;
 }
+.target-content-item p{
+	font-size: 14px;
+}
 .target-content-item h1{
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: 900;
-	line-height: 80px;
+	line-height: 70px;
 	padding-top: 10px;
 	padding-bottom: 20px ;
 }
