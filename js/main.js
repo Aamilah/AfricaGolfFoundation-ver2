@@ -93,51 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
   // International Phone Num Input section end
 
-// Modal Start
-document.addEventListener('DOMContentLoaded', (event) => {
-const modal1 = document.getElementById('modal1');
-const modal2 = document.getElementById('modal2');
-const modal3 = document.getElementById('modal3');
-
-const openModal1Btn = document.getElementById('openModal1Btn');
-const openModal2Btn = document.getElementById('openModal2Btn');
-const openModal3Btn = document.getElementById('openModal3Btn');
-
-const closeBtns = document.querySelectorAll('.closeBtn');
-
-// Functions to open the modals
-openModal1Btn.addEventListener('click', () => {
-    modal1.style.display = 'block';
-});
-
-openModal2Btn.addEventListener('click', () => {
-    modal2.style.display = 'block';
-});
-
-openModal3Btn.addEventListener('click', () => {
-    modal3.style.display = 'block';
-});
-
-// Function to close the modals
-closeBtns.forEach(btn => {
-    btn.addEventListener('click', (event) => {
-        const modalId = event.target.getAttribute('data-modal');
-        document.getElementById(modalId).style.display = 'none';
-    });
-});
-
-    // Close the modals if the user clicks anywhere outside of it
-    window.addEventListener('click', (event) => {
-        if (event.target == modal1) {
-            modal1.style.display = 'none';
-        } else if (event.target == modal2) {
-            modal2.style.display = 'none';
-        } else if (event.target == modal3) {
-            modal3.style.display = 'none';
-        }
-    });
-});
-// Modal End
   // JavaScript to redirect when "Equipment Donation" is selected
   document.getElementById('equipment-donation').addEventListener('change', function() {
     if (this.checked) {

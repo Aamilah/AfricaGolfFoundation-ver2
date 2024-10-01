@@ -56,13 +56,43 @@ maximum-scale=1.0, user-scalable=no" />
 
 <section class="banner what-we-do-banner" style="background-image:url('images/donate-banner.png');">
   <div class="banner-overlay">
-  <div class="banner-content">
-    <blockquote>Africa Golf Foundation</blockquote>
-    <h1>Donate to our Cause</h1>
-    <p>Your support is crucial to the success of our programs and initiatives. By donating or partnering with us, you’re not just supporting the game of golf, but you’re also contributing to the development of young talent, community empowerment, and the future of sports in Africa. Learn how you can make a difference today.</p>
+    <div class="banner-content">
+      <blockquote>Africa Golf Foundation</blockquote>
+      <h1>Donate to our Cause</h1>
+      <p>Your support is crucial to the success of our programs and initiatives. By donating or partnering with us, you’re not just supporting the game of golf, but you’re also contributing to the development of young talent, community empowerment, and the future of sports in Africa. Learn how you can make a difference today.</p>
+    </div>
   </div>
+  <div class="targets-div">
+    <div class="container">
+      <div class="target-content">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="target-content-item">
+              <h3>Cash Donations</h3>
+              <h1 class="counter green" data-start="500"  data-target="1000" data-prefix="$" data-suffix="+" data-duration="3000">0</h1>
+              <p>Raised through generous cash donations to support golf programs and community initiatives across Africa</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="target-content-item">
+              <h3>Equipment Donated</h3>
+              <h1 class="counter green" data-target="20" data-suffix="+">0</h1>
+              <p>Pieces of golf equipment donated, helping aspiring golfers and organizations across Africa improve their skills and passion for the game</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="target-content-item">
+              <h3>Mentors Enrolled</h3>
+              <h1 class="counter green" data-target="50" data-suffix="+">0</h1>
+              <p>Experienced golfers and professionals enrolled as mentors, providing invaluable guidance to the next generation of African golfers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 <section class="what-we-do-1">
   <div class="container">
     <div class="row">
@@ -214,12 +244,12 @@ maximum-scale=1.0, user-scalable=no" />
                       <button type="button" id="remove-method" style="display: none;">- Remove Payment Method</button>
                       </div>
                     </div>
-                    <button class="btn btn-primary" type="submit" name="">Submit Donation</button>
+                    <button class="btn btn-primary" type="submit" name="donation_form">Submit Donation</button>
                   </form>
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-4" id="monetary-donation-summary" style="  position: relative">
+            <div class="col-sm-12 col-md-12 col-lg-4" id="monetary-donation-summary">
               <div class="donation_box moving-div">
                 <h3>Donation Summary</h3>
                 <!-- Monetary Donation Summary -->
@@ -243,6 +273,8 @@ maximum-scale=1.0, user-scalable=no" />
   </div>
 </section>
 <!-----Donate End-----  -->
+<!-- Overlay HTML -->
+<div id="overlay-popup" class="overlay-popup"></div>
 
 <!-------payment Start------->
   <section class="equipment" id="2">
@@ -333,7 +365,7 @@ maximum-scale=1.0, user-scalable=no" />
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-4" id="equipment-donation-summary" style="  position: relative">
+                <div class="col-lg-4" id="equipment-donation-summary">
                   <div class="donation_box moving-div">
                     <h3>Donation Summary</h3>
                     <!-- Monetary Donation Summary -->
@@ -359,15 +391,9 @@ maximum-scale=1.0, user-scalable=no" />
     </div>
   </section>
 <!-----Donate End-----  -->
-<!-- Loading Popup -->
-<div id="loadingPopup" class="overlay-popup" style="display: none;">
-  <div class="popup">
-      <p>Loading, please wait...</p>
-      <div class="loader-popup"></div>
-  </div>
-</div>
 <!-- Overlay HTML -->
 <div id="overlay-popup" class="overlay-popup"></div>
+
 
 <!-------footer Start------->
 <section class="footer">
@@ -452,29 +478,68 @@ maximum-scale=1.0, user-scalable=no" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 <!-- scrollIt js --> 
 <script src="js/scrollIt.min.js"></script> 
 <script src="js/wow.min.js"></script> 
 		<!-- Owl Carousel JS -->
 <script src="js/owl-carousel.js"></script>
 <script src="js/main.js"></script>
+<script src="js/counter.js"></script>
 <script>
-  document.getElementById('equipment_form').addEventListener('submit', function(event) {
-      // Show the loading popup
-      document.getElementById('loadingPopup').style.display = 'block';
-  });
-    document.getElementById('donation_form').addEventListener('submit', function(event) {
-      // Show the loading popup
-      document.getElementById('loadingPopup').style.display = 'block';
-  });
-  // Function to display pop-up message and show overlay
-  function showPopup(message) {
-      var popup = document.getElementById('popup');
-      var overlay = document.getElementById('overlay-popup');
+  document.getElementById('donation_form').addEventListener('submit', function(event) {
+    document.getElementById('overlay-popup').style.display = 'block';
 
-      popup.classList.add('active');
-      overlay.classList.add('active');  // Show the overlay
-  }
+    var duration = 6000; 
+    var end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 50,
+            spread: 70,
+            origin: { y: 0.7 },
+            zIndex: 1000 
+        });
+
+        
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+
+    // Hide the overlay after the confetti has finished
+    setTimeout(function() {
+        document.getElementById('overlay-popup').style.display = 'none';
+    }, duration);
+  });
+  document.getElementById('equipment_form').addEventListener('submit', function(event) {
+    document.getElementById('overlay-popup').style.display = 'block';
+
+    var duration = 6000; 
+    var end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 50,
+            spread: 70,
+            origin: { y: 0.7 },
+            zIndex: 1000 
+        });
+
+        
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+
+    // Hide the overlay after the confetti has finished
+    setTimeout(function() {
+        document.getElementById('overlay-popup').style.display = 'none';
+    }, duration);
+});
+
 </script>
 </body>
 </html>
+  
