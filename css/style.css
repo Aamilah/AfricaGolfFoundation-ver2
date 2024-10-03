@@ -1032,6 +1032,9 @@ pre {
 	padding: 20px;
 	margin-top: 70px;
 }
+.section-padding-about{
+	margin-top: -130px;
+}
 .what-we-do-1 .image-container {
     position: relative;
     display: inline-block;
@@ -1072,6 +1075,21 @@ pre {
 }
 .what-we-do-3{
 	padding: 100px;
+}
+.what-we-do-3-item p{
+	font-size: 12px;
+}
+.what-we-do-3-icon{
+	justify-content: center;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+	background-color: #fffcfcd5;
+	width: 40px;
+	height: 40px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	padding: 10px 13px;
 }
 .what-we-do-3 h2{
 	margin-top: 20px;
@@ -1431,6 +1449,11 @@ pre {
 .who-we-serve-item .content-right{
 	height: 100%;
 }
+@media (max-width:1280px) {
+	.targets-div .target-content{
+		margin-top: 400px;
+	}
+}
 @media (max-width:1024px) {
 	.targets-div .target-content{
 		margin-top: 350px;
@@ -1491,6 +1514,237 @@ pre {
 		font-size: 0.9rem;
 	  }
 }
+/*===========================
+	Milestones
+===========================*/
+.milestones {
+	padding: 50px 0;
+  }
+  
+  .milestone-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 50px auto;
+	position: relative;
+	flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  }
+  
+  .milestone-text-section {
+	display: flex;
+	align-items: flex-start;
+	width: 49%;
+  }
+  
+  .milestone-text {
+	background-color: #ff9800;
+	border-bottom: 15px solid #5AA01C;
+	padding: 25px 25px;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+  }
+  
+  .milestone-text h1 {
+	font-size: 75px;
+	line-height: 0.8;
+	margin: 0;
+  }
+  
+  .number-large {
+	font-weight: bold;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 30px;
+  }
+  
+  .number-small {
+	font-size: 35px;
+	line-height: 37px;
+	font-weight: lighter;
+  }
+  
+  .milestone-paragraph {
+	padding-left: 10px;
+	font-size: 10px;
+	flex: 1;
+  }
+  
+  .milestone-paragraph p {
+	padding: 15px;
+	color: #a7a7a7;
+  }
+  
+  .milestone {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+	width: 23%;
+	position: relative;
+	margin-bottom: 20px;
+  }
+  
+  .milestone-icon {
+	background-color: #ffa103;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 18px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto 10px;
+	position: relative;
+  }
+  
+  .milestone-content h3 {
+	font-size: 18px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	color: #333;
+  }
+  
+  .milestone-content p {
+	font-size: 14px;
+	color: #666;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+	width: 100%;
+	background-color: #e0e0e0;
+	border-radius: 25px;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 5px;
+  }
+  
+  .progress {
+	height: 100%;
+	width: 0%;
+	background-color: #5AA01C;
+	transition: width 1s ease;
+	border-radius: 25px;
+  }
+  
+  .milestone-flex {
+	display: flex;
+  }
+  
+  .milestone-text-section-2 {
+	align-items: flex-start;
+	width: 69%;
+  }
+  
+  .milestone-text-2 {
+	background-color: #5AA01C;
+	border-bottom: 15px solid #ff9800;
+	width: 50%;
+	margin-left: 17px;
+	padding: 25px 25px;
+	color: #fff;
+	display: flex;
+  }
+  
+  .milestone-text-2 h1 {
+	font-size: 75px;
+	line-height: 0.8;
+	margin: 0;
+  }
+  
+  .number-large-2 {
+	font-weight: bold;
+	display: block;
+	padding-top: 20px;
+  }
+  
+  .number-small-2 {
+	font-size: 35px;
+	line-height: 37px;
+	font-weight: lighter;
+	padding-top: 10px;
+	padding-left: 20px;
+	text-align: center;
+  }
+  
+  .milestone-paragraph-2 {
+	font-size: 10px;
+	padding: 0;
+	flex: 1;
+  }
+  
+  .milestone-paragraph-2 p {
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	color: #a7a7a7;
+  }
+  
+  /* Responsive Media Queries */
+  
+  /* For tablets and smaller screens */
+  @media (max-width: 992px) {
+	.milestone-container {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.milestone-text-section, .milestone-text-section-2 {
+	  width: 100%;
+	  margin-bottom: 20px;
+	}
+  
+	.milestone {
+	  width: 45%;
+	  margin-bottom: 20px;
+	}
+  
+	.milestone-text h1, .milestone-text-2 h1 {
+	  font-size: 50px;
+	}
+  
+	.number-small, .number-small-2 {
+	  font-size: 25px;
+	}
+  
+	.milestone-paragraph, .milestone-paragraph-2 p {
+	  font-size: 12px;
+	}
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 576px) {
+	.milestone-container {
+	  flex-direction: column;
+	  padding: 10px;
+	}
+  
+	.milestone {
+	  width: 100%;
+	  margin-bottom: 20px;
+	}
+  
+	.milestone-text h1, .milestone-text-2 h1 {
+	  font-size: 40px;
+	}
+  
+	.number-small, .number-small-2 {
+	  font-size: 20px;
+	}
+  
+	.milestone-paragraph, .milestone-paragraph-2 p {
+	  font-size: 10px;
+	}
+  
+	.milestone-text, .milestone-text-2 {
+	  padding: 20px;
+	}
+  }
+  
 /*===========================
 	partnership
 =============================*/
