@@ -66,17 +66,7 @@ $(window).on("load",function (){
 
 // Carousel Start
     // Header carousel
-    $(".hero-slider").owlCarousel({
-      autoplay: true,
-      animateOut: 'fadeOutLeft',
-      smartSpeed: 1000,           // Smooth transition speed
-      items: 1,
-      dots: true,
-      loop: true,
-      nav : true,
-      freeDrag: false,             // Ensure smooth transitions without free dragging
-      navText :false
-  });
+
 // Carousel End
 
 // International Phone Num Input section start
