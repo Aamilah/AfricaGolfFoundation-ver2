@@ -513,6 +513,11 @@ pre {
 	margin-top: 20px;
 	animation: fadeInUp 1s both 1s;
 }
+@media screen and (min-width: 1920px) {
+	.who-we-do-it-for-banner .banner-content{
+		margin-left: 370px;
+	}
+}
 @media (max-width: 1280px) {
 	.banner {
 	  height: 80vh; 
