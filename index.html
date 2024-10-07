@@ -586,6 +586,14 @@ maximum-scale=1.0, user-scalable=no" />
       freeDrag: false,             
       navText :false
   });
+document.addEventListener("DOMContentLoaded", function() {
+  const progressBars = document.querySelectorAll('.progress');
+
+  progressBars.forEach(bar => {
+    let percentage = bar.getAttribute('data-percentage');
+    bar.style.width = percentage + '%';
+  });
+});
 </script>
 </body>
 </html>
